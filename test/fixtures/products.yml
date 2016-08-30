@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  artist: MyString
+  album: MyString
+  year: MyString
+  weight: MyString
+  genre: MyString
+  price: MyString
+  image: MyString
+
+two:
+  artist: MyString
+  album: MyString
+  year: MyString
+  weight: MyString
+  genre: MyString
+  price: MyString
+  image: MyString
