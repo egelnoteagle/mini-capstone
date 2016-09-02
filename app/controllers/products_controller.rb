@@ -1,10 +1,42 @@
 class ProductsController < ApplicationController
-  def one
-    @product = Product.find(2)
-  end 
+  def index
+    @records = Product.all
+  end
 
-  def all
-    @products = Product.all
+  def show
+    @record = Product.find(params[:id])
+  end
+
+  def new
+    
+  end
+
+  def create
+    @record = Product.create(image: params[:image],
+                             artist: params[:artist],
+                             album: params[:album],
+                             year: params[:year],
+                             genre: params[:genre],
+                             weight: params[:weight],
+                             price: params[:price])
+    render 'show.html.erb'
+  end
+
+  def edit
+    @record = Product.find(params[:id])
+  end
+
+  def update
+    @record = Product.find(params[:id])
+    @record.update(image: params[:image],
+                   artist: params[:artist],
+                   album: params[:album],
+                   year: params[:year],
+                   genre: params[:genre],
+                   weight: params[:weight],
+                   price: params[:price])
+      
+    render 'show.html.erb'
   end
 end 
 

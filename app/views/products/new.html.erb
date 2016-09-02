@@ -1,0 +1,35 @@
+<h1>Create a New Record Request</h1>
+
+<%= form_tag '/records', method: :post do %>
+  <div>
+    <%= label_tag :image %>
+    <%= text_field_tag :image %>
+  </div>
+  <div>
+    <%= label_tag :artist %>
+    <%= text_field_tag :artist %>
+  </div>
+  <div>
+    <%= label_tag :album %>
+    <%= text_field_tag :album %>
+  </div>
+  <div>
+    <%= label_tag :year %>
+    <%= text_field_tag :year %>
+  </div>
+  <div>
+    <%= label_tag :genre %>
+    <%= text_field_tag :genre %>
+  </div>
+  <div>
+    <%= label_tag :weight %>
+    <%= text_field_tag :weight %>
+  </div>
+  <div>
+    <%= label_tag :price %>
+    <%= text_field_tag :price %>
+  </div>
+  <div>
+    <%= submit_tag "Submit Request" %>
+  </div>
+<% end %>  

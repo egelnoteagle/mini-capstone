@@ -1,0 +1,35 @@
+<h1>Edit Record Info</h1>
+
+<%= form_tag "/records/#{@record.id}", method: :patch do %>
+  <div>
+    <%= label_tag :image %>
+    <%= text_field_tag :image, @record.image %>
+  </div>
+  <div>
+    <%= label_tag :artist %>
+    <%= text_field_tag :artist, @record.artist %>
+  </div>
+  <div>
+    <%= label_tag :album %>
+    <%= text_field_tag :album, @record.album %>
+  </div>
+  <div>
+    <%= label_tag :year %>
+    <%= text_field_tag :year, @record.year %>
+  </div>
+  <div>
+    <%= label_tag :genre %>
+    <%= text_field_tag :genre, @record.genre %>
+  </div>
+  <div>
+    <%= label_tag :weight %>
+    <%= text_field_tag :weight, @record.weight %>
+  </div>
+  <div>
+    <%= label_tag :price %>
+    <%= text_field_tag :price, @record.price %>
+  </div>
+  <div>
+    <%= submit_tag "Submit Request" %>
+  </div>
+<% end %>  

@@ -1,1 +1,13 @@
-<h1>Welcome to The Vine(yl) Bin Wrigleyville's Finest Record Store</h1>  
+<h1>The Vine(yl) Bin | Wrigleyville's Finest Record Store</h1>  
+
+<% @records.each do |record| %>
+  <br>
+  <img src= <%= record.image %>>
+  <h3><%= link_to record.artist, "/records/#{record.id}" %></h3>
+  <h3>Album: <%= record.album %></h3>
+  <h3>Year: <%= record.year %></h3>
+  <h3>Genre: <%= record.genre %></h3>
+  <h3>Weight: <%= record.weight %></h3>
+  <h3>Price: <%= record.price %></h3>
+  <br>
+<% end %>  
