@@ -1,3 +1,8 @@
+<%= link_to 'Home', '/records' %>
+<br>
+<%= link_to 'Edit Record', "/records/#{@record.id}/edit" %>
+<br>
+<%= link_to 'Delete Record', "/records/#{@record.id}", method: :delete %>
 <br>
 <img src= <%= @record.image %>>
 <h3>Artist: <%= @record.artist %></h3>
@@ -6,3 +11,4 @@
 <h3>Genre: <%= @record.genre %></h3>
 <h3>Weight: <%= @record.weight %></h3>
 <h3>Price: <%= @record.price %></h3>
+

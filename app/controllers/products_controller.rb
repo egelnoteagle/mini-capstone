@@ -19,7 +19,9 @@ class ProductsController < ApplicationController
                              genre: params[:genre],
                              weight: params[:weight],
                              price: params[:price])
-    render 'show.html.erb'
+    
+    flash[:success] = "New Record Created" 
+    redirect_to "/records/#{@record.id}"
   end
 
   def edit
@@ -36,7 +38,16 @@ class ProductsController < ApplicationController
                    weight: params[:weight],
                    price: params[:price])
       
-    render 'show.html.erb'
+    flash[:success] = "Record Updated"
+    redirect_to "/records/#{@record.id}"
+  end
+
+  def destroy
+    @record = Product.find(params[:id])
+    @record.destroy
+
+    flash[:warning] = "Record Deleted"
+    redirect_to '/records'
   end
 end 
 

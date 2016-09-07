@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   get '/records/:id/edit' => 'products#edit'
   patch '/records/:id' => 'products#update'
+
+  delete '/records/:id' => 'products#destroy'
 end
