@@ -1,13 +1,19 @@
 <h1>Current Stock:</h1>
 
-<% @records.each do |record| %>
-  <br>
-  <img src= <%= record.image %>>
-  <h3><%= link_to record.artist, "/records/#{record.id}" %></h3>
-  <h4>Album: <%= record.album %></h4>
-  <h4>Year: <%= record.year %></h4>
-  <h4>Genre: <%= record.genre %></h4>
-  <h4>Weight: <%= record.weight %></h4>
-  <h4>Price: <%= record.price %></h4>
-  <br>
-<% end %>  
+<div class="row">
+  <% @records.each do |record| %>
+    <div class="col-md-4">
+      <div class="well thumbnail">
+        <a href="/records/<%= record.id %>">
+          <img src= "<%= record.image %>" alt ="<%= record.album %>" class="img-rounded index-img">
+        </a> 
+        <h3><%= link_to record.artist, "/records/#{record.id}" %></h3>
+        <h4>Album: <%= record.album %></h4>
+        <h4>Year: <%= record.year %></h4>
+        <h4>Genre: <%= record.genre %></h4>
+        <h4>Weight: <%= record.weight %></h4>
+        <h4>Price: <%= record.price %></h4>
+      </div>
+    </div>
+  <% end %> 
+</div>   
