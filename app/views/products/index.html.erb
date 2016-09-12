@@ -13,7 +13,7 @@
         <h4>Genre: <%= record.genre %></h4>
         <h4>Weight: <%= record.weight %></h4>
         <h4>Description: <%= record.description %></h4>
-        <h4>Price: <%= record.price %></h4>
+        <h4>Price: <%= number_to_currency(record.price) %></h4>
       </div>
     </div>
   <% end %> 
