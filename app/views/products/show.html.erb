@@ -2,7 +2,6 @@
 <br>
 <%= link_to 'Delete Record', "/records/#{@record.id}", method: :delete %>
 <br>
-<img src= <%= @record.image %>>
 <% if @record.discounted? %>
   <h3>On Sale!</h3>
 <% else %>  
@@ -19,5 +18,9 @@
 <h4 class="<%= "discount-price" if @record.discounted? %>">Price: <%= number_to_currency(@record.price) %></h4>
 <h4>Tax: <%= number_to_currency(@record.tax) %></h4>
 <h3>Total: <%= number_to_currency(@record.total) %></h3>
+<br>
+<h6>Supplier: <%= @supplier.name %></h6>
+<h6>Email: <%= @supplier.email %></h6>
+<h6>Phone: <%= @supplier.phone %></h6>
 
 

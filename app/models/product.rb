@@ -1,11 +1,6 @@
 class Product < ApplicationRecord
-  # def sale_message
-  #   if price.to_f > 20
-  #     "Discount Item!"
-  #   else  
-  #     "On Sale!"
-  #   end  
-  # end 
+  belongs_to :supplier
+  has_many :images
 
   def tax
     price.to_f * 0.09
@@ -17,5 +12,9 @@ class Product < ApplicationRecord
 
   def discounted?
     price.to_f < 20
+  end
+
+  def top_image
+    images.first.url
   end
 end

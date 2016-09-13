@@ -23,7 +23,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @record = Product.find(params[:id])  
+    @record = Product.find(params[:id])
+    @supplier = @record.supplier  
   end
 
   def new
