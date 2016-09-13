@@ -37,7 +37,8 @@ class ProductsController < ApplicationController
                              year: params[:year],
                              genre: params[:genre],
                              weight: params[:weight],
-                             price: params[:price])
+                             price: params[:price],
+                             description: params[:description])
     
     flash[:success] = "New Record Created" 
     redirect_to "/records/#{@record.id}"
@@ -55,7 +56,8 @@ class ProductsController < ApplicationController
                    year: params[:year],
                    genre: params[:genre],
                    weight: params[:weight],
-                   price: params[:price])
+                   price: params[:price],
+                   description: params[:description])
       
     flash[:success] = "Record Updated"
     redirect_to "/records/#{@record.id}"

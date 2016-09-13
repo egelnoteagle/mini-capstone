@@ -1,0 +1,14 @@
+<h1>Supplier:</h1>
+
+<div class="row">
+  <% @suppliers.each do |supplier| %>
+    <div class="col-md-4">
+      <div class="well thumbnail">
+        <a href="/suppliers/<%= supplier.id %>"> 
+        <h4>Name: <%= supplier.name %></h4>
+        <h4>Email: <%= supplier.email %></h4>
+        <h4>Phone: <%= supplier.phone %></h4>
+      </div>
+    </div>
+  <% end %> 
+</div>  

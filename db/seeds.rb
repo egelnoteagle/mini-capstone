@@ -1,71 +1,12 @@
-Product.create(artist: "Beastie Boys",
-                 album: "Paul's Boutique",
-                 year: "1989",
-                 weight: "180 grams",
-                 genre: "Rap",
-                 price: "$21.99",
-                 image: "https://upload.wikimedia.org/wikipedia/en/0/07/BeastieBoysPaul%27sBoutique.jpg"
-                 )
-
-Product.create(artist: "Run the Jewels",
-                 album: "Run the jewels",
-                 year: "2015",
-                 weight: "120 grams",
-                 genre: "Rap",
-                 price: "$17.56",
-                 image: "https://images-na.ssl-images-amazon.com/images/I/91U3Nt6YU2L._SL1500_.jpg"
-                 )
-
-Product.create(artist: "Radiohead",
-                 album: "In Rainbows",
-                 year: "2007",
-                 weight: "120 grams",
-                 genre: "Alternative",
-                 price: "$18.99",
-                 image: "https://images-na.ssl-images-amazon.com/images/I/61gGZcwziIL.jpg"
-                 )
-
-Product.create(artist: "The War on Drugs",
-                 album: "Lost In The Dream",
-                 year: "2014",
-                 weight: "120 grams",
-                 genre: "Alternative",
-                 price: "$19.78",
-                 image: "https://images-na.ssl-images-amazon.com/images/I/81haPiAN3JL._SL1425_.jpg"
-                 )
-
-Product.create(artist: "Miles Davis",
-                 album: "Kind of Blue",
-                 year: "1959",
-                 weight: "180 grams",
-                 genre: "Jazz",
-                 price: "$11.44",
-                 image: "https://images-na.ssl-images-amazon.com/images/I/81mHq1buc5L._SL1500_.jpg"
-                 )
-
-Product.create(artist: "Disclosure",
-                 album: "Settle",
-                 year: "2013",
-                 weight: "120 grams",
-                 genre: "Dance",
-                 price: "$23.13",
-                 image: "https://images-na.ssl-images-amazon.com/images/I/81VfiYEgSrL._SL1400_.jpg"
-                 )
-
-Product.create(artist: "Future",
-                 album: "DS2",
-                 year: "2015",
-                 weight: "120 grams",
-                 genre: "Rap",
-                 price: "$27.99",
-                 image: "https://images-na.ssl-images-amazon.com/images/I/81QrmqJKJoL._SL1500_.jpg"
-                 )
-
-Product.create(artist: "Tame Impala",
-                 album: "Currents",
-                 year: "2015",
-                 weight: "120 grams",
-                 genre: "Alternative",
-                 price: "$23.99",
-                 image: "https://images-na.ssl-images-amazon.com/images/I/91sqAJFwmJL._SL1400_.jpg"
-                 )
+Product.create!([
+  {artist: "Disclosure", album: "Settle", year: "2013", weight: "120 grams", genre: "Dance", price: "23.13", image: "https://images-na.ssl-images-amazon.com/images/I/61FTKvUQlvL.jpg", description: "", supplier_id: 1},
+  {artist: "Florence + The Machine", album: "How Big, How Blue, How Beautiful", year: "2015", weight: "120 grams", genre: "Pop", price: "26.99", image: "https://images-na.ssl-images-amazon.com/images/I/41v3wi8ELBL.jpg", description: "The result is How Big, How Blue, How Beautiful, a collection of songs, written and recorded over the course of 2014. Produced by Markus Dravs (Björk, Arcade Fire, Coldplay) with contributions from Paul Epworth, Kid Harpoon and John Hill, the third album by Florence + the Machine is live-sounding, tune-rich, unhinged in all the right places and powerful in all the best ways. In voice and, ultimately, outlook Florence has never sounded better.", supplier_id: 2},
+  {artist: "Tame Impala", album: "Currents", year: "2015", weight: "120 grams", genre: "Alternative", price: "23.99", image: "https://images-na.ssl-images-amazon.com/images/I/71yZv2UScoL.jpg", description: "Currents is the third studio album by Australian rock band Tame Impala, released on 17 July 2015 by Modular Recordings and Universal Music Australia in Australia, Fiction Records in Europe and Interscope Records in the United States. Like the group's previous two albums, Currents was written, recorded, performed, and produced by primary member Kevin Parker. For the first time, Parker also mixed the music. It was also the first time that Parker recorded all instruments by himself; the album featured no other collaborators.", supplier_id: 1},
+  {artist: "Miles Davis", album: "Kind of Blue", year: "1959", weight: "180 grams", genre: "Jazz", price: "11.44", image: "http://www.mofi.com/v/vspfiles/photos/MFSL45-011-2.jpg", description: "Kind of Blue is a studio album by American jazz musician Miles Davis, released on August 17, 1959, by Columbia Records. It was recorded earlier that year on March 2 and April 22 at Columbia's 30th Street Studio in New York City. The recording sessions featured Davis's ensemble sextet, consisting of pianist Bill Evans, drummer Jimmy Cobb, bassist Paul Chambers, and saxophonists John Coltrane and Julian \"Cannonball\" Adderley, together with pianist Wynton Kelly on one track.", supplier_id: 2},
+  {artist: "Bad Bad Not Good", album: "IV", year: "2016", weight: "120 grams", genre: "Jazz", price: "21.99", image: "https://colinfsmithblog.files.wordpress.com/2016/06/badbadnotgood-iv-e1464809435919.jpg", description: "IV is the fourth studio album from Canadian jazz instrumental hip hop band BadBadNotGood. It was released on July 8, 2016. It features collaborations with Future Islands frontman Sam Herring, saxophonist Colin Stetson, Haitian-Canadian musician Kaytranada, American hip hop artist Mick Jenkins, and Canadian singer-songwriter Charlotte Day Wilson.", supplier_id: 1},
+  {artist: "Radiohead", album: "In Rainbows", year: "2007", weight: "120 grams", genre: "Alternative", price: "18.99", image: "http://eil.com/images/main/Radiohead+In+Rainbows+503924.jpg", description: "In Rainbows is the seventh studio album by the English rock band Radiohead, self-released on 10 October 2007 as a pay-what-you-want download. It was followed by a physical release internationally by XL Recordings on 3 December 2007 and in the United States on 1 January 2008 by TBD Records. It was Radiohead's first release after their six-album recording contract with EMI ended with their previous album Hail to the Thief (2003).", supplier_id: 2},
+  {artist: "Beastie Boys", album: "Paul's Boutique", year: "1989", weight: "180 grams", genre: "Rap", price: "21.99", image: "http://i.imgur.com/J9SXUUu.png", description: "Paul's Boutique is the second studio album by the American hip hop group Beastie Boys, released on July 25, 1989, on Capitol Records. Featuring production by the Dust Brothers, the recording sessions for the album took place in Matt Dike's apartment and the Record Plant in Los Angeles from 1988 to 1989, after which the recordings underwent mixing at the Record Plant in Los Angeles. Subsequent remixes were done at the Manhattan-based Record Plant Studios. The album is noted for being almost completely composed of samples, excluding the group's vocal output.", supplier_id: 1},
+  {artist: "Run the Jewels", album: "Run the jewels", year: "2015", weight: "120 grams", genre: "Rap", price: "17.56", image: "http://cdn2.pitchfork.com/albums/19410/e231dd24.jpg", description: "Run the Jewels is the debut studio album by American hip hop duo Run the Jewels, which consists of Killer Mike and El-P. The album was released on June 26, 2013, through Fool's Gold Records.", supplier_id: 2},
+  {artist: "The War on Drugs", album: "Lost In The Dream", year: "2014", weight: "120 grams", genre: "Alternative", price: "19.78", image: "http://cdn3.pitchfork.com/albums/20300/9419e472.jpg", description: "Lost in the Dream is the third studio album by American indie rock band The War on Drugs, released on March 18, 2014 through Secretly Canadian. The album debuted at number 26 on the Billboard 200 and received universal acclaim from critics upon its release, appearing on and topping numerous end-of-year best album lists. The album produced five singles: \"Red Eyes\", \"Under the Pressure\", \"Burning\", \"Eyes to the Wind\", and \"An Ocean in Between the Waves\", all of which were released as radio promotional singles only.", supplier_id: 1},
+  {artist: "Future", album: "DS2", year: "2015", weight: "120 grams", genre: "Rap", price: "27.99", image: "https://images-na.ssl-images-amazon.com/images/I/61mcorT8TRL.jpg", description: "DS2 (abbreviation of Dirty Sprite 2) is the third studio album by American hip hop recording artist Future. It was released on July 17, 2015, by A-1 Recordings, Freebandz and Epic Records. It serves as the sequel from his breakout mixtape, Dirty Sprite (2011).[1] The album was supported by three singles: \"Fuck Up Some Commas\", \"Where Ya At\" featuring Drake, and \"Stick Talk\".", supplier_id: 2}
+])

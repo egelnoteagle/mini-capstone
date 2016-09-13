@@ -10,10 +10,12 @@
 <% end %>  
 <h3>Artist: <%= @record.artist %></h3>
 <h4>Album: <%= @record.album %></h4>
-<h4>Year: <%= @record.year %></h4>
-<h4>Genre: <%= @record.genre %></h4>
-<h4>Weight: <%= @record.weight %></h4>
-<h4>Description: <%= @record.description %></h4>
+<h5>Year: <%= @record.year %></h5>
+<h5>Genre: <%= @record.genre %></h5>
+<h5>Weight: <%= @record.weight %></h5>
+<br>
+<h4>Description:</h4> <p><%= @record.description %></p>
+<br>
 <h4 class="<%= "discount-price" if @record.discounted? %>">Price: <%= number_to_currency(@record.price) %></h4>
 <h4>Tax: <%= number_to_currency(@record.tax) %></h4>
 <h3>Total: <%= number_to_currency(@record.total) %></h3>
