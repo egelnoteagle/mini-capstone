@@ -39,7 +39,10 @@ class ProductsController < ApplicationController
                              genre: params[:genre],
                              weight: params[:weight],
                              price: params[:price],
-                             description: params[:description])
+                             description: params[:description],
+                             supplier_id: params[:supplier_id])
+
+    Image.create(url: params[:image], product_id: @product.id) if params[:image]
     
     flash[:success] = "New Record Created" 
     redirect_to "/records/#{@record.id}"

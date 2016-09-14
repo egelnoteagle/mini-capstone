@@ -1,3 +1,15 @@
+Image.create!([
+  {url: "https://upload.wikimedia.org/wikipedia/en/7/76/Disclosure_-_Settle.png", product_id: 1},
+  {url: "https://upload.wikimedia.org/wikipedia/en/3/33/Florence_and_the_Machine_-_How_Big_How_Blue_How_Beautiful_(Official_Album_Cover).png", product_id: 2},
+  {url: "http://media.npr.org/assets/img/2015/07/08/tame-impala-cover2_sq-27bec311716548d1d706ac5eaff060d2cb6bc7ab-s300-c85.jpg", product_id: 3},
+  {url: "http://e.snmc.io/lk/f/l/b0766a4cee8712eb5b0d7535d9399130/2622639.jpg", product_id: 4},
+  {url: "https://2.bp.blogspot.com/-h4YCEKHD6bE/V4OSU-J8tsI/AAAAAAAAhn4/4Bo5qto7OmIlKQAacZku-AS6VuI5xIpmACLcB/s1600/Badbadnotgood%2Biv%2Balbum%2Bcover.jpg", product_id: 5},
+  {url: "https://upload.wikimedia.org/wikipedia/en/2/2e/In_Rainbows_Official_Cover.jpg", product_id: 6},
+  {url: "http://e.snmc.io/lk/f/l/133786c4c4d7d5ac125c0c174dad906e/1292863.jpg", product_id: 7},
+  {url: "https://lastfm-img2.akamaized.net/i/u/300x300/454c7a38d6fa44f8c40fda65e138d453.jpg", product_id: 8},
+  {url: "http://e.snmc.io/lk/f/a/4eaf1e291f33432891c6c34fcd001a88/5028754.jpg", product_id: 9},
+  {url: "http://images.popmatters.com/reviews_art/f/future-album-300x300.jpg", product_id: 10}
+])
 Product.create!([
   {artist: "Disclosure", album: "Settle", year: "2013", weight: "120 grams", genre: "Dance", price: "23.13", description: "", supplier_id: 1},
   {artist: "Florence + The Machine", album: "How Big, How Blue, How Beautiful", year: "2015", weight: "120 grams", genre: "Pop", price: "26.99", description: "The result is How Big, How Blue, How Beautiful, a collection of songs, written and recorded over the course of 2014. Produced by Markus Dravs (Björk, Arcade Fire, Coldplay) with contributions from Paul Epworth, Kid Harpoon and John Hill, the third album by Florence + the Machine is live-sounding, tune-rich, unhinged in all the right places and powerful in all the best ways. In voice and, ultimately, outlook Florence has never sounded better.", supplier_id: 2},

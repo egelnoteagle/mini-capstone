@@ -4,6 +4,7 @@
   <% @records.each do |record| %>
     <div class="col-md-4">
       <div class="well thumbnail">
+        <img src="<%= record.top_image %>"
         <h3><%= link_to record.artist, "/records/#{record.id}" %></h3>
         <h4>Album: <%= record.album %></h4>
         <h4>Year: <%= record.year %></h4>

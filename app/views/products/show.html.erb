@@ -6,7 +6,9 @@
   <h3>On Sale!</h3>
 <% else %>  
   <h3>Discounted!</h3>
-<% end %>  
+<% end %> 
+<img src="<%= @record.top_image %>" 
+<br>
 <h3>Artist: <%= @record.artist %></h3>
 <h4>Album: <%= @record.album %></h4>
 <h5>Year: <%= @record.year %></h5>
