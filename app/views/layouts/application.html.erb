@@ -36,7 +36,9 @@
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Log Out</a></li>
           </ul>
         </li>
       </ul>
@@ -50,13 +52,18 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">test</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/records?sort=price&sort_order=desc">Sort Price: Highest to Lowest</a></li>
             <li><a href="/records?sort=price&sort_order=asc">Sort Price: Lowest to Highest</a></li>
             <li><a href="/records?discount=20">Discounted Records</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <% if current_user %>
+              <li><%= link_to 'Log Out', '/logout', method: :delete %></li>
+            <% else %>
+              <li><a href="/signup">Sign Up</a></li>
+              <li><a href="/login">Log In</a></li>
+            <% end %>
           </ul>
         </li>
       </ul>
