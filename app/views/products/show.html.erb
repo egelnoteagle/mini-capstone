@@ -24,5 +24,22 @@
 <h6>Supplier: <%= @supplier.name %></h6>
 <h6>Email: <%= @supplier.email %></h6>
 <h6>Phone: <%= @supplier.phone %></h6>
+<br>
+<%= form_tag '/orders', method: :post do %>
+<div>
+  <%= label_tag :quantity %>
+  <%= text_field_tag :quantity %>
+</div>
+<div>
+  <%= label_tag :product_id %>
+  <%= text_field_tag :product_id %>
+</div>
+<div>
+  <%= label_tag :user_id %>
+  <%= text_field_tag :user_id %>
+</div>
+<br>
+<%= submit_tag 'Buy Now' %>
+<% end %>
 
 
