@@ -21,25 +21,19 @@
 <h4>Tax: <%= number_to_currency(@record.tax) %></h4>
 <h3>Total: <%= number_to_currency(@record.total) %></h3>
 <br>
+<%= form_tag '/orders', method: :post do %>
+  <div>
+    <%= text_field_tag :quantity, nil, placeholder: "Quantity"%>
+  </div>
+  <div>
+    <%= hidden_field_tag :product_id, @record.id  %>
+  </div>
+  <%= submit_tag 'Buy Now' %>
+<% end %>
+
+<br>
 <h6>Supplier: <%= @supplier.name %></h6>
 <h6>Email: <%= @supplier.email %></h6>
 <h6>Phone: <%= @supplier.phone %></h6>
-<br>
-<%= form_tag '/orders', method: :post do %>
-<div>
-  <%= label_tag :quantity %>
-  <%= text_field_tag :quantity %>
-</div>
-<div>
-  <%= label_tag :product_id %>
-  <%= text_field_tag :product_id %>
-</div>
-<div>
-  <%= label_tag :user_id %>
-  <%= text_field_tag :user_id %>
-</div>
-<br>
-<%= submit_tag 'Buy Now' %>
-<% end %>
 
 

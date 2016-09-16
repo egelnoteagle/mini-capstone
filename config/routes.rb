@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/suppliers/new' => 'suppliers#new'
   post '/records' => 'products#create'
   post '/suppliers' => 'suppliers#create'
+  post '/login' => 'sessions#create'
 
   get '/records/:id' => 'products#show'
   get 'suppliers/:id' => 'suppliers#show'
@@ -24,10 +25,9 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
   get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+  
   delete '/logout' => 'sessions#destroy'
 
-  get '/orders' => 'orders#show'
   post '/orders' => 'orders#create'
   get '/orders/:id' => 'orders#show'
 end
