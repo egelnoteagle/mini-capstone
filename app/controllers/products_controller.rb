@@ -5,6 +5,11 @@ class ProductsController < ApplicationController
     sort_order = params[:sort_order]
     discout_level = params[:discount]
     search_term = params[:search_term]
+    category = params[:category]
+
+    if category
+      @records = Category.find_by(name: category).products
+    end  
 
     if search_term
       fuzzy_search_term = "%#{search_term}%"
@@ -24,7 +29,8 @@ class ProductsController < ApplicationController
 
   def show
     @record = Product.find(params[:id])
-    @supplier = @record.supplier  
+    @supplier = @record.supplier 
+    @categories = @record.categories 
   end
 
   def new

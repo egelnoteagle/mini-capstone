@@ -12,7 +12,11 @@
 <h3>Artist: <%= @record.artist %></h3>
 <h4>Album: <%= @record.album %></h4>
 <h5>Year: <%= @record.year %></h5>
-<h5>Genre: <%= @record.genre %></h5>
+<ul>
+<% @categories.each do |category|%>
+  <li><%= category.name %></li>
+<% end %>
+</ul>
 <h5>Weight: <%= @record.weight %></h5>
 <br>
 <h4>Description:</h4> <p><%= @record.description %></p>

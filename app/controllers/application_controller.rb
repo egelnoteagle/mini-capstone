@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     redirect_to '/login' unless current_user
   end
+
+  def find_categories_list
+    @categories_list = Category.all
+  end
 end
