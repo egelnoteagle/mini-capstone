@@ -1,6 +1,8 @@
-<%= link_to 'Edit Record', "/records/#{@record.id}/edit" %>
-<br>
-<%= link_to 'Delete Record', "/records/#{@record.id}", method: :delete %>
+<% if current_user && current_user.admin %>
+  <%= link_to 'Edit Record', "/records/#{@record.id}/edit" %>
+  <br>
+  <%= link_to 'Delete Record', "/records/#{@record.id}", method: :delete %>
+<% end %>  
 <br>
 <% if @record.discounted? %>
   <h3>On Sale!</h3>

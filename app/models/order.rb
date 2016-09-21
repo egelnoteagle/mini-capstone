@@ -3,16 +3,16 @@ class Order < ApplicationRecord
   has_many :carted_products
   has_many :products, through: :carted_products
 
+  def calculate_totals
+    subtotal_collector = 0
 
-  def calculate_subtotal(product_object)
-    self.subtotal = product_object.price * quantity
-  end
+    carted_products.each do |carted_product|
+      subtotal_collector += carted_product.subtotal
+    end 
 
-  def calculate_tax
+    self.subtotal = subtotal_collector 
     self.tax = subtotal * 0.09
-  end
-
-  def calculate_total
     self.total = subtotal + tax
+    save
   end
 end

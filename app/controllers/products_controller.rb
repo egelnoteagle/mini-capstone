@@ -1,11 +1,16 @@
 class ProductsController < ApplicationController
+
+  before_action :authenticate_admin!, except: [:index, :show]
+
   def index
-    @records = Product.all
+    @records = Product.all.includes(:images)
     sort_attribute = params[:sort]
     sort_order = params[:sort_order]
     discout_level = params[:discount]
     search_term = params[:search_term]
     category = params[:category]
+
+    
 
     if category
       @records = Category.find_by(name: category).products
@@ -34,10 +39,11 @@ class ProductsController < ApplicationController
   end
 
   def new
-    
+     
   end
 
   def create
+
     @record = Product.create(image: params[:image],
                              artist: params[:artist],
                              album: params[:album],
@@ -59,6 +65,7 @@ class ProductsController < ApplicationController
   end
 
   def update
+
     @record = Product.find(params[:id])
     @record.update(image: params[:image],
                    artist: params[:artist],
@@ -74,6 +81,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+
     @record = Product.find(params[:id])
     @record.destroy
 
