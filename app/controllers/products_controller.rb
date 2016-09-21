@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
-
-  before_action :authenticate_admin!, except: [:index, :show]
+  before_action :authenticate_admin!, except: [:index, :show, :random]
 
   def index
     @records = Product.all.includes(:images)

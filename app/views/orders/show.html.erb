@@ -1,7 +1,7 @@
 <h1><%= @order.user.name %> Here Is Your Order: </h1>
 
 <% @order.carted_products.each do |carted_product| %>
-  <h2>Title: <%= carted_product.album %> qty - <%= carted_product.quantity %></h2>
+  <h2>Title: <%= carted_product.product.album %> qty - <%= carted_product.quantity %></h2>
 <% end %>
 
 <h3>Subtotal: <%= number_to_currency(@order.subtotal) %></h3>
