@@ -38,12 +38,12 @@ class ProductsController < ApplicationController
   end
 
   def new
-     
+     @product = Product.new
   end
 
   def create
 
-    @record = Product.create(image: params[:image],
+    @record = Product.new(
                              artist: params[:artist],
                              album: params[:album],
                              year: params[:year],
@@ -53,10 +53,15 @@ class ProductsController < ApplicationController
                              description: params[:description],
                              supplier_id: params[:supplier_id])
 
-    Image.create(url: params[:image], product_id: @product.id) if params[:image]
-    
-    flash[:success] = "New Record Created" 
-    redirect_to "/records/#{@record.id}"
+    if @record.save
+
+      Image.create(url: params[:image], product_id: @product.id) if params[:image]
+      
+      flash[:success] = "New Record Created" 
+      redirect_to "/records/#{@record.id}"
+    else
+      render 'new.html.erb'  
+    end  
   end
 
   def edit

@@ -14,6 +14,7 @@ class CartedProductsController < ApplicationController
   def create
     @carted_product = CartedProduct.create(user_id: current_user.id, quantity: params[:quantity], product_id: params[:product_id], status: "carted")
 
+    session[:cart_count] = nil
     flash[:success] = 'Item added to your cart.'
     redirect_to '/carted_products'
   end
@@ -21,6 +22,8 @@ class CartedProductsController < ApplicationController
   def destroy
     carted_product = CartedProduct.find(params[:id])
     carted_product.update(status: "removed")
+
+    session[:cart_count] = nil
     flash[:success] = "Product Removed From Cart"
     redirect_to "/carted_products"
   end

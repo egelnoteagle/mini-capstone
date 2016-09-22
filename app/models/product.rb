@@ -1,4 +1,11 @@
 class Product < ApplicationRecord
+
+  validates :album, presence: true
+  validates :album, uniqueness: true
+  validates :price, presence: true
+  validates :description, presence: true
+  validates :description, length: { in: 5..300}
+
   belongs_to :supplier
   has_many :images
   has_many :category_products
